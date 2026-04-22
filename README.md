@@ -1,6 +1,6 @@
 # ComfyUI-EnumCombo
 
-Workflow-local enum values for ComfyUI.
+Workflow-local enumerated values for ComfyUI.
 
 ![workflow](example_workflows/workflow.png)
 
