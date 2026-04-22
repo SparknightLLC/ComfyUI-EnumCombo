@@ -32,7 +32,7 @@ ComfyUI has a Beta node called [CustomCombo](https://docs.comfy.org/built-in-nod
 
 ---
 
-There's another alternative called [CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) has a flexible custom dropdown and mapper system, and it can solve a similar problem. ComfyUI-EnumCombo is intentionally narrower:
+There's another alternative called [CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) that has a flexible custom dropdown and mapper system, and it can solve a similar problem. ComfyUI-EnumCombo is intentionally narrower:
 
 - No third-party Python dependencies.
 - No wildcard output type for the basic enum value.
