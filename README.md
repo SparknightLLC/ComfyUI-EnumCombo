@@ -22,7 +22,17 @@ The goal for me was to replace note-based integer conventions like `0 = TXT2IMG`
 
 ## Versus Other Alternatives
 
-An alternative like [CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) has a flexible custom dropdown and mapper system, and it can solve a similar problem. ComfyUI-EnumCombo is intentionally narrower:
+ComfyUI has a Beta node called [CustomCombo](https://docs.comfy.org/built-in-nodes/CustomCombo) that allows for the creation of a custom dropdown list. EnumCombo has some advantages over it:
+
+- CustomCombo takes up a lot of space vertically, as each option you add increases the height of the node. With EnumCombo, you can link to your options from a separate node that can be independently collapsed.
+- You cannot rearrange the order of CustomCombo options.
+- At the time of writing, CustomCombo has a bug where it fails to delete an option after clearing its value. e.g. `value_one / [blank] / value_three` will incorrectly allow the blank option to persist.
+- CustomCombo seems to break when adding entries with special characters.
+- CustomCombo lacks the flexibility of an enum definition, e.g. you cannot re-index entries nor add comments.
+
+---
+
+There's another alternative called [CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) has a flexible custom dropdown and mapper system, and it can solve a similar problem. ComfyUI-EnumCombo is intentionally narrower:
 
 - No third-party Python dependencies.
 - No wildcard output type for the basic enum value.
@@ -31,6 +41,8 @@ An alternative like [CRZnodes](https://github.com/CoreyCorza/ComfyUI-CRZnodes) h
 - A compact node for common workflows and an advanced node when extra metadata is useful.
 
 Use CRZnodes if you want its broader dashboard-style node set or arbitrary data mapping. Use ComfyUI-EnumCombo when you only need lightweight enum-to-integer workflow controls.
+
+
 
 ## Syntax
 
